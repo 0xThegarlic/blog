@@ -1,0 +1,29 @@
+site_name: DFIR
+site_url: http://192.168.222.41
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette: 
+  - scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline 
+      name: Switch to dark mode
+    primary: teal
+    accent: purple
+  - scheme: slate
+    toggle:
+      icon: material/toggle-switch 
+      name: Switch to light mode
+    primary: teal
+    accent: lime
+
+
