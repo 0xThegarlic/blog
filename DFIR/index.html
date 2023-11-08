@@ -1,0 +1,2121 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://192.168.222.41/DFIR/">
+      
+      
+        <link rel="prev" href="../CHALLENGES/tryhackme/">
+      
+      
+        <link rel="next" href="FORENSIC/Forensic-Android/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+    
+    
+      
+        <title>Bienvenue dans l'Investigation Numérique et Réponse aux Incidents - DFIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7bf56d0a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bienvenue-dans-linvestigation-numerique-et-reponse-aux-incidents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DFIR" class="md-header__button md-logo" aria-label="DFIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DFIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bienvenue dans l'Investigation Numérique et Réponse aux Incidents
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Bienvenue sur Garlic's blog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../CHALLENGES/" class="md-tabs__link">
+        CHALLENGES
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        DFIR
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../FORENSIC-ANDROID/" class="md-tabs__link">
+        FORENSIC ANDROID
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../FORENSIC-LINUX/" class="md-tabs__link">
+        FORENSIC LINUX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../FORENSIC-TOOLS/" class="md-tabs__link">
+        FORENSIC TOOLS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../FORENSIC-WINDOWS/Forensic-Windows/" class="md-tabs__link">
+        FORENSIC WINDOWS
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../GESTION%20DE%20CRISE/Gestion-de-crise/" class="md-tabs__link">
+        GESTION DE CRISE
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../SOC/Security-Operations-Center/" class="md-tabs__link">
+        SOC
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DFIR" class="md-nav__button md-logo" aria-label="DFIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DFIR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Bienvenue sur Garlic's blog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          CHALLENGES
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CHALLENGES
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHALLENGES/" class="md-nav__link">
+        Challenges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHALLENGES/BlueTeam/" class="md-nav__link">
+        BlueTeam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHALLENGES/Cyberdefenders/" class="md-nav__link">
+        Cyberdefenders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHALLENGES/EchoCTF/" class="md-nav__link">
+        EchoCTF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHALLENGES/PicoCTF/" class="md-nav__link">
+        PicoCTF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHALLENGES/tryhackme/" class="md-nav__link">
+        Tryhackme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          DFIR
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          DFIR
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bienvenue dans l'Investigation Numérique et Réponse aux Incidents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Bienvenue dans l'Investigation Numérique et Réponse aux Incidents
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mais-que-veut-dire-investigation-numerique-et-la-reponse-aux-incidents" class="md-nav__link">
+    Mais que veut dire " investigation numérique et la réponse aux incidents ? "
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs-de-linvestigation-numerique-et-de-la-reponse-aux-incidents-de-securite" class="md-nav__link">
+    Objectifs de l'investigation numérique et de la réponse aux incidents de sécurité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methologie-dune-investigation-numerique" class="md-nav__link">
+    Méthologie d'une investigation numérique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-quune-preuve-numerique" class="md-nav__link">
+    Qu'est-ce qu'une preuve numérique ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-types-de-preuves-numeriques" class="md-nav__link">
+    Les Types de preuves numériques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acquisition-de-donnees-et-preuves-numeriques" class="md-nav__link">
+    Acquisition de données et preuves numériques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-types-dacquisition" class="md-nav__link">
+    Les types d'acquisition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-types-de-donnees" class="md-nav__link">
+    Les types de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-de-fichiers" class="md-nav__link">
+    Types de fichiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formats-des-fichiers" class="md-nav__link">
+    Formats des fichiers
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          FORENSIC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          FORENSIC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          Forensic Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Forensic Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC/Forensic-Android/" class="md-nav__link">
+        Bienvenue sur Android
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          Forensic Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Forensic Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC/Forensic-Linux/" class="md-nav__link">
+        Bienvenue sur Forensic Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+          Forensic Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Forensic Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC/Forensic-Windows/" class="md-nav__link">
+        Bienvenue sur Forensic Windows 101
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          FORENSIC TOOLS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          FORENSIC TOOLS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+          Autopsy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Autopsy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC-TOOLS/Autopsy/autopsy/" class="md-nav__link">
+        Bienvenue dans Autopsy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+          Eric Zimmerman
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Eric Zimmerman
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC-TOOLS/Eric-Zimmerman/eric/" class="md-nav__link">
+        Bienvenue dans Eric Zimmerman's tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+          Forensic Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Forensic Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3_1" id="__nav_3_3_3_1_label" tabindex="0">
+          Autopsy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Autopsy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC-TOOLS/Forensic-Tools/Autopsy/autopsy/" class="md-nav__link">
+        Bienvenue dans Autopsy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3_2" id="__nav_3_3_3_2_label" tabindex="0">
+          Eric Zimmerman
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Eric Zimmerman
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC-TOOLS/Forensic-Tools/Eric-Zimmerman/eric/" class="md-nav__link">
+        Bienvenue dans Eric Zimmerman's tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+          Volatility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Volatility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FORENSIC-TOOLS/Volatility/volatility/" class="md-nav__link">
+        Bienvenue dans Volatility
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          FORENSIC ANDROID
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          FORENSIC ANDROID
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FORENSIC-ANDROID/" class="md-nav__link">
+        Bienvenue sur Android
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          FORENSIC LINUX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          FORENSIC LINUX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FORENSIC-LINUX/" class="md-nav__link">
+        Bienvenue sur Forensic Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          FORENSIC TOOLS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          FORENSIC TOOLS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FORENSIC-TOOLS/" class="md-nav__link">
+        Bienvenue dans forensic tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Autopsy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Autopsy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FORENSIC-TOOLS/Autopsy/autopsy/" class="md-nav__link">
+        Bienvenue dans Autopsy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          Eric Zimmerman
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Eric Zimmerman
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FORENSIC-TOOLS/Eric-Zimmerman/eric/" class="md-nav__link">
+        Bienvenue dans Eric Zimmerman's tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+          Volatility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Volatility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FORENSIC-TOOLS/Volatility/volatility/" class="md-nav__link">
+        Bienvenue dans Volatility
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          FORENSIC WINDOWS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          FORENSIC WINDOWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          Forensic Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Forensic Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FORENSIC-WINDOWS/Forensic-Windows/" class="md-nav__link">
+        Bienvenue sur Forensic Windows 101
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          GESTION DE CRISE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          GESTION DE CRISE
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GESTION%20DE%20CRISE/Gestion-de-crise/" class="md-nav__link">
+        Bienvenue dans la gestion de crise cyber
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          SOC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          SOC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOC/Security-Operations-Center/" class="md-nav__link">
+        Security Operations Center
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+          SOC TOOLS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          SOC TOOLS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2_1" id="__nav_9_2_1_label" tabindex="0">
+          CORTEX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          CORTEX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOC/SOC-TOOLS/CORTEX/cortex/" class="md-nav__link">
+        Cortex
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2_2" id="__nav_9_2_2_label" tabindex="0">
+          MISP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          MISP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOC/SOC-TOOLS/MISP/misp/" class="md-nav__link">
+        Misp
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2_3" id="__nav_9_2_3_label" tabindex="0">
+          OpenCTI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          OpenCTI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOC/SOC-TOOLS/OpenCTI/opencti/" class="md-nav__link">
+        Opencti
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2_4" id="__nav_9_2_4_label" tabindex="0">
+          SPLUNK
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          SPLUNK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOC/SOC-TOOLS/SPLUNK/splunk/" class="md-nav__link">
+        Splunk
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2_5" id="__nav_9_2_5_label" tabindex="0">
+          TheHive
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          TheHive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOC/SOC-TOOLS/TheHive/thehive/" class="md-nav__link">
+        Thehive
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2_6" id="__nav_9_2_6_label" tabindex="0">
+          WAZUH
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          WAZUH
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOC/SOC-TOOLS/WAZUH/wazuh/" class="md-nav__link">
+        Wazuh
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="bienvenue-dans-linvestigation-numerique-et-reponse-aux-incidents">Bienvenue dans l'Investigation Numérique et Réponse aux Incidents</h1>
+<p>Si vous êtes nouveau dans le domaine du <strong><em><a href="https://www.crowdstrike.com/cybersecurity-101/digital-forensics-and-incident-response-dfir/">DFIR (Digital Forensic and Incident Response)</a></em></strong> et vous ne savez pas par où commencer, alors ce blog est le vôtre ! </p>
+<p>Vous ou certainement l’un de vos proches a déjà été piraté et vous vous demandiez comment cela est-il arrivé ? Ou encore vous avez vu dans les journaux qu’une entreprise ou un hôpital a été victime d’une <strong><a href="https://fr.wikipedia.org/wiki/Cyberattaque">cyberattaque</a></strong> et vous aimeriez savoir comment ces entreprises et hôpitaux font face à la crise cyber, comment font-ils pour sortir de cette même crise et surtout comment font-ils pour suivre les traces des attaquants afin d’attribuer l’attaque dont ils font face à un groupe d’attaquant communément appelé <strong><a href="https://fr.wikipedia.org/wiki/Advanced_Persistent_Threat">APT (Advanced Persistent Threat)</a></strong> ?  Eh bien vous trouverez la réponse à ces questions ici. </p>
+<p>Avant de commencer, laissez-moi vous rassurer qu’en <strong>2020</strong>, je me posais exactement les mêmes questions et je me demandais : </p>
+<ul>
+<li>A quel moment peut-on affirmer que nous faisons face à une attaque informatique ? </li>
+<li>Comment les enquêteurs font-ils pour avoir des preuves d'une attaque informatique ? </li>
+<li>Comment ces même enquêteurs peuvent-ils s'assurer de l'exactitude et de la fiabilité des informations provenant des sources numériques telles qu'une <strong>RAM</strong>, un <strong>disque dur</strong> ou tout autre <a href="https://www.journaldunet.fr/web-tech/dictionnaire-du-webmastering/1445256-artefact-en-informatique-definition-et-role/"><strong>artefact</strong></a> pour attribuer une <strong>attaque informatique</strong> à un groupe d'attaquants ou encore à un pays à la suite d'une investigation numérique ?</li>
+<li>Comment savent-ils depuis qaund l’attaquant s’est infiltré dans un réseau informatique ? </li>
+<li>Comment savent-ils quels chemins l’attaquant a-t-il emprunté ? </li>
+<li>Comment font-ils pour avoir une chronologie des événement ?</li>
+<li>Est-ce que c’est l’attaquant qui leur dit tout ce qu’il a fait ? etc…</li>
+</ul>
+<p>Bon, vous l’aurez compris… j’avais autant de questions de <strong>comment, Qui, Pourquoi, Quand,</strong> etc. Pour répondre à ces questionnement, je suis allé à la quête des réponses et c’est là que j’ai découvert le monde de <a href="https://www.crowdstrike.com/cybersecurity-101/digital-forensics-and-incident-response-dfir/"><strong>l’investigation numérique et la réponse aux incidents</strong></a> qui est tout de suite devenu une passion pour moi. </p>
+<h2 id="mais-que-veut-dire-investigation-numerique-et-la-reponse-aux-incidents">Mais que veut dire " investigation numérique et la réponse aux incidents ? "</h2>
+<p>L’investigation numérique et la réponse aux incidents sont deux domaines de la cybersécurité couvrant l’<strong>identification</strong>, la <strong>collecte</strong> et l’<strong>investigation</strong> des <strong>artefacts</strong> suite à un incident de sécurité. Evidemment, ces deux domaines sont étroitement liés mais restent distincts.</p>
+<ol>
+<li>
+<p><strong>Investigation numérique (Forensic)</strong> : consiste en l’application de processus et techniques d’investigation permettant de collecter et d’analyser des <a href="https://www.kaspersky.fr/resource-center/definitions/what-is-a-digital-footprint"><strong>empreintes numériques</strong></a> laissées sur des supports numériques afin d'identifier des preuves dans le cadre d'une enquête judiciaire ou encore dans le cadre d’une reconstitution des faits à la suite d'un incident de sécurité ou d'une attaque informatique. </p>
+</li>
+<li>
+<p><strong>Réponse aux incidents</strong> : regroupe l’ensemble des actions mises en œuvre pour <strong>prévenir</strong>, <strong>détecter</strong>, <strong>confiner</strong> et <strong>répondre</strong> aux <strong>cybermenaces</strong>. </p>
+</li>
+</ol>
+<p>En cas de suspicion d'activités malveillantes ou d'attaques informatiques au sein d'un <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_d'information"><strong>système d'information</strong></a>, un <a href="https://guardia.school/metiers/analyste-en-reponse-a-incidents.html"><strong>analyste de réponse aux incidents de sécurité</strong></a> analyse les alertes et réalise une analyse technique du même <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_d'information"><strong>SI</strong></a> pour comprendre le <strong>pourquoi</strong> du <strong>comment</strong>. 
+Il se doit <strong>identifier</strong> le <strong>mode opératoire</strong> des attaquants afin de qualifier l’étendue d’une potentielle <strong>compromission</strong>. Pour ce faire, il doit avoir une bonne compréhension de comment  opèrent les attaquants pendant toutes les étapes de la <a href="https://www.netskope.com/fr/security-defined/cyber-security-kill-chain"><strong>Kill Chain</strong></a>. Il doit également avoir une bonne connaissance des <a href="https://tehtris.com/fr/blog/glossaire/ttps-tactiques-techniques-et-procedures"><strong>tactiques, techniques et procédures</strong></a> utilisées par des attaquants.</p>
+<h2 id="objectifs-de-linvestigation-numerique-et-de-la-reponse-aux-incidents-de-securite">Objectifs de l'investigation numérique et de la réponse aux incidents de sécurité</h2>
+<p>L’objectif principal d’une <a href="https://fr.wikipedia.org/wiki/Informatique_l%C3%A9gale"><strong>investigation numérique</strong></a> est d’enquêter sur les <strong>empreintes numériques</strong> laissées sur les appareils électroniques tels que des <strong>ordinateurs</strong>, des <strong>tablettes</strong>, des <strong>téléphones portables</strong> ou de tout autre appareil informatique capable de stocker/traiter des données numériques et d'en extraire des preuves numériques. Cependant, les objectifs d'une investigation numérique peuvent inclure :</p>
+<ul>
+<li><strong>La collecte de preuves</strong> : cette phase permet de collecter des preuves numériques pertinentes tout en préservant leur intégrité. Cette <strong>phase</strong> reste <strong>cruciale</strong>, car toute la suite d'une investigation numérique en dépend. Une fois les preuves altérées, elles deviennent inexploitables.</li>
+<li><strong>L’analyse de preuves</strong> : une fois les preuves collectées, celles-ci doivent être analysées pour trouver des informations pertinentes qui pourraient aider à résoudre l’incident de sécurité en cours. </li>
+<li><strong>L’identification de potentiels suspects</strong> : les informations pertinentes obtenues suite à l’analyse des preuves numériques peuvent aider les enquêteurs à identifier de potentiels suspects à travers leurs signatures afin d’attribuer l’action malveillante à son potentiel initiateur. </li>
+<li><strong>La prévention de nouvelles attaques</strong> : le résultat d’une investigation numérique peut également servir à prévenir de futures cyberattaques en identifiant les vulnérabilités du système informatique et en fournissant des remédiations.</li>
+</ul>
+<h2 id="methologie-dune-investigation-numerique">Méthologie d'une investigation numérique</h2>
+<p>Comme évoqué plus haut, <strong>l’investigation numérique et la réponse aux incidents</strong> sont étroitement liées, car elles couvrent l’<strong>identification</strong>, la <strong>collecte</strong> et l’<strong>investigation</strong> des d’artefacts à la suite d’un incident de sécurité. Cependant, une certaine norme doit être respectée pour faire face et pour répondre à un incident informatique. Selon le <a href="https://fr.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology"><strong>NIST (National Institute of Standards and Technology)</strong></a>, une réponse aux incidents de sécurité peut se décompose en <strong>4 phases principales</strong> (<a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf">Guide NIST</a>) :</p>
+<p>1-  <strong>Préparation</strong> : comme son nom l'indique, c'est la phase de <strong>préparation</strong> et <strong>d'anticipation</strong> aux incidents de sécurité. Cette étape permet de <strong>prévenir</strong> et de <strong>répondre</strong> aux <strong>incidents de sécurité</strong>. Pour ce faire, il faut en amont <strong>former</strong> et <strong>sensibiliser</strong> les équipes et mettre en place des <strong><a href="https://www.varonis.com/fr/blog/ids-et-ips-en-quoi-sont-ils-differents">systèmes de détection et protection</a></strong> adéquats. Rien de mieux que l’anticipation, car on sera tôt ou tard attaqué. </p>
+<p>2-  <strong>Détection et analyse</strong> : à travers les règles de détection mises en place dans des organisation, des alertes de sécurité sont déclenchées en cas suspicion d’incident. A la suite de ce déclenchement, une analyse est ensuite menée pour détecter les faux positifs afin de les classifier. </p>
+<p>3-  <strong>Confinement, éradication et rétablissement</strong> : cette phase vise à limiter au maximum les potentiels impacts que peut causer un incident de sécurité, en essayant d’atténuer les interruptions de service. L’objectif principal de cette phase est de confiner l’incident, pour ensuite investiguer afin de l’anéantir.</p>
+<p>4-  <strong>Activité post-incident</strong> : à la suite de l'incident, un <strong>retour d'expérience</strong> peut être nécessaire pour identifier l'ensemble des difficultés rencontrées au cours de l'activité. Cela peut aider à prevenir de futurs incidents et cela pourra également permettre à l'équipe de réponse aux incidents de mieux se préparer et de limiter les risques que l'incident ne se reproduise.</p>
+<p>Ci-dessous un diagramme explicatif du cycle de vie d'une réponse aux incidents selon le <strong>NIST</strong> :</p>
+<figure>
+<img src="nist.png" 
+        alt="Picture" 
+        width="600" 
+        style="display: block; margin: 0 auto" />
+        <figcaption><p> <center>Cycle de vie d'une réponse aux incidents (image source :<a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf"> NIST</a>)</center></p></figcaption>
+
+</figure>
+
+<h2 id="quest-ce-quune-preuve-numerique">Qu'est-ce qu'une preuve numérique ?</h2>
+<p>Une <a href="https://digital-solutions.konicaminolta.fr/gestion-documentaire/article-preuve-numerique-les-regles-a-respecter/"><strong>preuve numérique</strong></a> est tout élément de preuve obtenu à partir d'une <strong>source électronique</strong> telle que (un <strong>ordinateur</strong>, un <strong>appareil mobile</strong>, un <strong>système de surveillance</strong>, un <strong>réseau informatique</strong>, une <strong>communication électronique, etc.</strong>), pouvant être utilisée pour établir les faits dans une enquête ou une affaire judiciaire.</p>
+<h2 id="les-types-de-preuves-numeriques">Les Types de preuves numériques</h2>
+<p>Les preuves numériques peuvent prendre différentes formes : </p>
+<ul>
+<li>courriels</li>
+<li>documents électroniques</li>
+<li>données crées par des utilisateurs (fichiers texte, documents MS Office, fichiers multimédias, etc.)</li>
+<li>enregistrements audio/vidéo</li>
+<li>fichiers système</li>
+<li>historiques de navigation des utilisateurs</li>
+<li>images numériques</li>
+<li>journaux d'activité</li>
+<li>etc.</li>
+</ul>
+<p>L'ensemble de ces preuves numériques restent accessibles par un enquêteur / investigateur numérique. Cependant, l'emplacement de ces derniers diffèrent d'un appareil à un autre et l’acquisition de chacune d’elles nécessite des méthodologies et outils différents. </p>
+<h2 id="acquisition-de-donnees-et-preuves-numeriques">Acquisition de données et preuves numériques</h2>
+<p>L'<strong>acquisition</strong> consiste à faire une copie d'un élément de <strong>preuve numérique</strong>, qui peut être n'importe quel type de support (Disque Dur, RAM, USB, CD, etc.). Cette phase d’acquisition reste l’une des phases les plus cruciales d’une <strong>investigation numérique</strong>, car elle permet de prélever (collecter) l’ensemble des preuves numériques à partir des supports numériques. Pour ce faire, les <strong>preuves numériques</strong> ne doivent pas être altérées. </p>
+<p>Il existe <strong>2 types</strong> d'acquisition des données (<strong>statique</strong> et <strong>dynamique</strong>). De plus, aucours de cette même phase d'acquisition, nous pouvons également rencontrer <strong>2 types de données</strong> :</p>
+<ul>
+<li>données volatiles</li>
+<li>données non volatiles</li>
+</ul>
+<h2 id="les-types-dacquisition">Les types d'acquisition</h2>
+<p>Il existe <strong>2 types</strong> d'acquisition :</p>
+<ul>
+<li><strong>Acquisition statique</strong> : consiste à recueillir des données non volatiles. Ce type d'acquisition est généralement réalisé sur des disques durs et tout autre support numérique pouvant sauvegarder des données même quand il n'est pas en état de fonctionnement.</li>
+<li><strong>Acquisition dynamique</strong> : consiste à collecter des données volatiles, généralement lorsque l'appareil est encore en fonctionnement. Ce type d'acquisition est réalisé sur des RAM. Aucours de cette phase, l'investigateur numérique doit être <strong>extrêmement prudent</strong> pour ne pas perdre l'ensemble des preuves ou les altérer.</li>
+</ul>
+<h2 id="les-types-de-donnees">Les types de données</h2>
+<p>Aucours d'une investigation numérique, nous serons amenés à investiguer sur <strong>2 types de données</strong> : les données volatiles et non volatiles.</p>
+<ul>
+<li>
+<p><strong>Données volatiles</strong> : sont des données qui peuvent changer ou potentiellement être supprimées sur un support numérique à la suite d'un changement bursque de son état actuel. Par exemple, les données d'une RAM sont volatiles et peuvent être supprimées à travers un simple redémarrage de l'odrinateur. </p>
+</li>
+<li>
+<p><strong>Données non volatiles</strong> : contrairement aux données volatiles, l'état actuel des données non volatiles ne peut changé que par une action utilisateur. Par exemple, un disque dur a des données non volatiles, car le simple redémarrage de l'ordinateur n'impact en aucun cas celles-ci. </p>
+</li>
+</ul>
+<h2 id="types-de-fichiers">Types de fichiers</h2>
+<p>*
+ddddd
+d
+d
+d
+d</p>
+<h2 id="formats-des-fichiers">Formats des fichiers</h2>
+<ul>
+<li><strong>Format RAW</strong></li>
+</ul>
+<p>Lors d'une investigation numérique, le format de fichier le plus utilisé est le format <strong>brut</strong> (<strong>raw</strong> en anglais). Ce format est généralement rencontré dans les copies d'une mémoire volatilre (RAM), dans le cadre l'acquisition de celle-ci. Il est également rencontré lors d'une copie bit à bit des données brutes d'un disque dur.</p>
+<p>En effet, le format <strong>raw</strong> permet de créer une copie complète du disque ou d'une seule partition à l'intérieur de celui-ci. Les principaux avantages de ce format résident dans sa capacité à ignorer les erreurs de lecture mineures du disque source, ainsi que dans la rapidité du transfert des données. De plus, le format <strong>raw</strong> est pris en charge par la plupart des logiciels d'investigation et il est le format de fichier par défaut pour la sortie générée par la célèbre commande "<strong>dd</strong>" bien connue des systèmes Linux/UNIX. Il existe plusieurs variantes de dénominations pour le format <strong>raw</strong>, telles que : <strong>raw</strong>, <strong>imag</strong>, <strong>dd</strong>, <strong>001</strong> et <strong>dmg</strong>.  </p>
+<p>Bien que le format <strong>raw</strong> présente d'énormes avantages, il convient de noter que son principal inconvénient est qu'il nécessite le même <strong>espace de stockage</strong> que le disque source, car il n'est pas possible de <strong>compresser</strong> les données lorsqu'elles sont au format <strong>raw</strong>, ce qui peut poser un problème lors de l'acquisition de disques durs de grande taille.</p>
+<ul>
+<li><strong>AFF (Advanced Forensic Format)</strong></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      
+    
+  </body>
+</html>
