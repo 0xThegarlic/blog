@@ -629,13 +629,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-de-fichiers" class="md-nav__link">
-    Types de fichiers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#formats-des-fichiers" class="md-nav__link">
     Formats des fichiers
   </a>
@@ -1967,19 +1960,19 @@
 
 
 <h1 id="bienvenue-dans-linvestigation-numerique-et-reponse-aux-incidents">Bienvenue dans l'Investigation Numérique et Réponse aux Incidents</h1>
-<p>Si vous êtes nouveau dans le domaine du <strong><em><a href="https://www.crowdstrike.com/cybersecurity-101/digital-forensics-and-incident-response-dfir/">DFIR (Digital Forensic and Incident Response)</a></em></strong> et vous ne savez pas par où commencer, alors ce blog est le vôtre ! </p>
-<p>Vous ou certainement l’un de vos proches a déjà été piraté et vous vous demandiez comment cela est-il arrivé ? Ou encore vous avez vu dans les journaux qu’une entreprise ou un hôpital a été victime d’une <strong><a href="https://fr.wikipedia.org/wiki/Cyberattaque">cyberattaque</a></strong> et vous aimeriez savoir comment ces entreprises et hôpitaux font face à la crise cyber, comment font-ils pour sortir de cette même crise et surtout comment font-ils pour suivre les traces des attaquants afin d’attribuer l’attaque dont ils font face à un groupe d’attaquant communément appelé <strong><a href="https://fr.wikipedia.org/wiki/Advanced_Persistent_Threat">APT (Advanced Persistent Threat)</a></strong> ?  Eh bien vous trouverez la réponse à ces questions ici. </p>
-<p>Avant de commencer, laissez-moi vous rassurer qu’en <strong>2020</strong>, je me posais exactement les mêmes questions et je me demandais : </p>
+<p>Si vous êtes nouveau dans le domaine du <strong><em><a href="https://www.crowdstrike.com/cybersecurity-101/digital-forensics-and-incident-response-dfir/">DFIR (Digital Forensic and Incident Response)</a></em></strong> et que vous ne savez pas par où commencer, alors ce blog est fait pour vous !</p>
+<p>Vous ou certainement l'un de vos proches avez déjà été victime de piratage informatique et vous vous demandiez comment cela s'est produit ? Ou peut-être avez-vous lu dans les journaux qu'une entreprise ou un hôpital a été victime d'une cyberattaque, et vous aimeriez savoir comment ces entreprises et hôpitaux font face à cette crise cyber, comment ils en sortent, et surtout comment ils parviennent à suivre les traces des attaquants pour attribuer l'attaque à un groupe d'attaquants communément appelé APT (Advanced Persistent Threat) ? Eh bien, vous trouverez les réponses à ces questions ici.</p>
+<p>Avant de commencer, permettez-moi de vous rassurer qu'en <strong>2020</strong>, je me posais exactement les mêmes questions. Je me demandais :</p>
 <ul>
-<li>A quel moment peut-on affirmer que nous faisons face à une attaque informatique ? </li>
-<li>Comment les enquêteurs font-ils pour avoir des preuves d'une attaque informatique ? </li>
-<li>Comment ces même enquêteurs peuvent-ils s'assurer de l'exactitude et de la fiabilité des informations provenant des sources numériques telles qu'une <strong>RAM</strong>, un <strong>disque dur</strong> ou tout autre <a href="https://www.journaldunet.fr/web-tech/dictionnaire-du-webmastering/1445256-artefact-en-informatique-definition-et-role/"><strong>artefact</strong></a> pour attribuer une <strong>attaque informatique</strong> à un groupe d'attaquants ou encore à un pays à la suite d'une investigation numérique ?</li>
-<li>Comment savent-ils depuis qaund l’attaquant s’est infiltré dans un réseau informatique ? </li>
-<li>Comment savent-ils quels chemins l’attaquant a-t-il emprunté ? </li>
-<li>Comment font-ils pour avoir une chronologie des événement ?</li>
-<li>Est-ce que c’est l’attaquant qui leur dit tout ce qu’il a fait ? etc…</li>
+<li>À quel moment peut-on affirmer que nous faisons face à une attaque informatique ?</li>
+<li>Comment les enquêteurs obtiennent-ils des preuves d'une attaque informatique ?</li>
+<li>Comment ces mêmes enquêteurs peuvent-ils s'assurer de l'exactitude et de la fiabilité des informations provenant des sources numériques telles qu'une <strong>RAM</strong>, un <strong>disque dur</strong>, ou tout autre <a href="https://www.journaldunet.fr/web-tech/dictionnaire-du-webmastering/1445256-artefact-en-informatique-definition-et-role/"><strong>artefact</strong></a> pour attribuer une attaque informatique à un groupe d'attaquants ou à un pays à la suite d'une investigation numérique ?</li>
+<li>Comment savent-ils depuis quand l'attaquant s'est infiltré dans un réseau informatique ?</li>
+<li>Comment savent-ils quels chemins l'attaquant a empruntés ?</li>
+<li>Comment parviennent-ils à établir une chronologie des événements ?</li>
+<li>Est-ce que c'est l'attaquant qui leur dit tout ce qu'il a fait ? Etc.</li>
 </ul>
-<p>Bon, vous l’aurez compris… j’avais autant de questions de <strong>comment, Qui, Pourquoi, Quand,</strong> etc. Pour répondre à ces questionnement, je suis allé à la quête des réponses et c’est là que j’ai découvert le monde de <a href="https://www.crowdstrike.com/cybersecurity-101/digital-forensics-and-incident-response-dfir/"><strong>l’investigation numérique et la réponse aux incidents</strong></a> qui est tout de suite devenu une passion pour moi. </p>
+<p>Bon, vous l'aurez compris...😉 J'avais autant de questions sur le <strong>comment</strong>, le <strong>qui</strong>, le <strong>pourquoi</strong>, le <strong>quand</strong>, etc. Pour répondre à ces questionnements, je suis parti à la recherche de réponses, et c'est ainsi que j'ai découvert le monde de <a href="https://www.crowdstrike.com/cybersecurity-101/digital-forensics-and-incident-response-dfir/"><strong>l’investigation numérique et la réponse aux incidents</strong></a>, ce qui est rapidement devenu une passion pour moi.</p>
 <h2 id="mais-que-veut-dire-investigation-numerique-et-la-reponse-aux-incidents">Mais que veut dire " investigation numérique et la réponse aux incidents ? "</h2>
 <p>L’investigation numérique et la réponse aux incidents sont deux domaines de la cybersécurité couvrant l’<strong>identification</strong>, la <strong>collecte</strong> et l’<strong>investigation</strong> des <strong>artefacts</strong> suite à un incident de sécurité. Evidemment, ces deux domaines sont étroitement liés mais restent distincts.</p>
 <ol>
@@ -1990,19 +1983,26 @@
 <p><strong>Réponse aux incidents</strong> : regroupe l’ensemble des actions mises en œuvre pour <strong>prévenir</strong>, <strong>détecter</strong>, <strong>confiner</strong> et <strong>répondre</strong> aux <strong>cybermenaces</strong>. </p>
 </li>
 </ol>
-<p>En cas de suspicion d'activités malveillantes ou d'attaques informatiques au sein d'un <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_d'information"><strong>système d'information</strong></a>, un <a href="https://guardia.school/metiers/analyste-en-reponse-a-incidents.html"><strong>analyste de réponse aux incidents de sécurité</strong></a> analyse les alertes et réalise une analyse technique du même <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_d'information"><strong>SI</strong></a> pour comprendre le <strong>pourquoi</strong> du <strong>comment</strong>. 
-Il se doit <strong>identifier</strong> le <strong>mode opératoire</strong> des attaquants afin de qualifier l’étendue d’une potentielle <strong>compromission</strong>. Pour ce faire, il doit avoir une bonne compréhension de comment  opèrent les attaquants pendant toutes les étapes de la <a href="https://www.netskope.com/fr/security-defined/cyber-security-kill-chain"><strong>Kill Chain</strong></a>. Il doit également avoir une bonne connaissance des <a href="https://tehtris.com/fr/blog/glossaire/ttps-tactiques-techniques-et-procedures"><strong>tactiques, techniques et procédures</strong></a> utilisées par des attaquants.</p>
+<p>En cas de suspicion d'activités malveillantes ou d'attaques informatiques au sein d'un <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_d'information"><strong>système d'information</strong></a>, un <a href="https://guardia.school/metiers/analyste-en-reponse-a-incidents.html"><strong>analyste de réponse aux incidents de sécurité</strong></a> analyse les alertes et réalise une analyse technique du même <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_d'information"><strong>SI</strong></a> afin de comprendre le <strong>pourquoi</strong> du <strong>comment</strong>. L'analyste se doit <strong>identifier</strong> le <strong>mode opératoire</strong> des attaquants afin de qualifier l’étendue d’une potentielle <strong>compromission</strong>. Pour ce faire, il doit avoir une bonne compréhension de comment  opèrent les attaquants pendant toutes les étapes de la <a href="https://www.netskope.com/fr/security-defined/cyber-security-kill-chain"><strong>Kill Chain</strong></a>. Il doit également avoir une bonne connaissance des <a href="https://tehtris.com/fr/blog/glossaire/ttps-tactiques-techniques-et-procedures"><strong>tactiques, techniques et procédures</strong></a> utilisées par des attaquants.</p>
 <h2 id="objectifs-de-linvestigation-numerique-et-de-la-reponse-aux-incidents-de-securite">Objectifs de l'investigation numérique et de la réponse aux incidents de sécurité</h2>
-<p>L’objectif principal d’une <a href="https://fr.wikipedia.org/wiki/Informatique_l%C3%A9gale"><strong>investigation numérique</strong></a> est d’enquêter sur les <strong>empreintes numériques</strong> laissées sur les appareils électroniques tels que des <strong>ordinateurs</strong>, des <strong>tablettes</strong>, des <strong>téléphones portables</strong> ou de tout autre appareil informatique capable de stocker/traiter des données numériques et d'en extraire des preuves numériques. Cependant, les objectifs d'une investigation numérique peuvent inclure :</p>
+<p>L’objectif principal d’une <a href="https://fr.wikipedia.org/wiki/Informatique_l%C3%A9gale"><strong>investigation numérique</strong></a> est d’enquêter sur les <strong>empreintes numériques</strong> laissées sur les appareils électroniques tels que des <strong>ordinateurs</strong>, des <strong>tablettes</strong>, des <strong>téléphones portables</strong> ou de tout autre appareil informatique capable de stocker/traiter des données numériques et d'en extraire des preuves numériques. Toutefois, les objectifs d'une investigation numérique peuvent inclure :</p>
 <ul>
-<li><strong>La collecte de preuves</strong> : cette phase permet de collecter des preuves numériques pertinentes tout en préservant leur intégrité. Cette <strong>phase</strong> reste <strong>cruciale</strong>, car toute la suite d'une investigation numérique en dépend. Une fois les preuves altérées, elles deviennent inexploitables.</li>
-<li><strong>L’analyse de preuves</strong> : une fois les preuves collectées, celles-ci doivent être analysées pour trouver des informations pertinentes qui pourraient aider à résoudre l’incident de sécurité en cours. </li>
-<li><strong>L’identification de potentiels suspects</strong> : les informations pertinentes obtenues suite à l’analyse des preuves numériques peuvent aider les enquêteurs à identifier de potentiels suspects à travers leurs signatures afin d’attribuer l’action malveillante à son potentiel initiateur. </li>
-<li><strong>La prévention de nouvelles attaques</strong> : le résultat d’une investigation numérique peut également servir à prévenir de futures cyberattaques en identifiant les vulnérabilités du système informatique et en fournissant des remédiations.</li>
+<li>
+<p><strong>La collecte des preuves</strong> : cette phase permet de collecter des preuves numériques pertinentes tout en préservant leur intégrité. Cette <strong>phase</strong> reste <strong>cruciale</strong>, car toute la suite d'une investigation numérique en dépend. Une fois les preuves altérées, elles deviennent inexploitables.</p>
+</li>
+<li>
+<p><strong>L’analyse des preuves</strong> : une fois les preuves collectées, celles-ci doivent être analysées pour trouver des informations pertinentes qui pourraient aider à résoudre l’incident de sécurité en cours. </p>
+</li>
+<li>
+<p><strong>L’identification de potentiels suspects</strong> : les informations pertinentes obtenues suite à l’analyse des preuves numériques peuvent aider les enquêteurs à identifier de potentiels suspects à travers leurs signatures afin d’attribuer l’action malveillante à son potentiel initiateur. </p>
+</li>
+<li>
+<p><strong>La prévention des nouvelles attaques</strong> : le résultat d'une investigation numérique peut également servir à prévenir de futures cyberattaques en identifiant les vulnérabilités d'un système informatique et en fournissant des remédiations.</p>
+</li>
 </ul>
 <h2 id="methologie-dune-investigation-numerique">Méthologie d'une investigation numérique</h2>
-<p>Comme évoqué plus haut, <strong>l’investigation numérique et la réponse aux incidents</strong> sont étroitement liées, car elles couvrent l’<strong>identification</strong>, la <strong>collecte</strong> et l’<strong>investigation</strong> des d’artefacts à la suite d’un incident de sécurité. Cependant, une certaine norme doit être respectée pour faire face et pour répondre à un incident informatique. Selon le <a href="https://fr.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology"><strong>NIST (National Institute of Standards and Technology)</strong></a>, une réponse aux incidents de sécurité peut se décompose en <strong>4 phases principales</strong> (<a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf">Guide NIST</a>) :</p>
-<p>1-  <strong>Préparation</strong> : comme son nom l'indique, c'est la phase de <strong>préparation</strong> et <strong>d'anticipation</strong> aux incidents de sécurité. Cette étape permet de <strong>prévenir</strong> et de <strong>répondre</strong> aux <strong>incidents de sécurité</strong>. Pour ce faire, il faut en amont <strong>former</strong> et <strong>sensibiliser</strong> les équipes et mettre en place des <strong><a href="https://www.varonis.com/fr/blog/ids-et-ips-en-quoi-sont-ils-differents">systèmes de détection et protection</a></strong> adéquats. Rien de mieux que l’anticipation, car on sera tôt ou tard attaqué. </p>
+<p>Comme évoqué plus haut, <strong>l’investigation numérique et la réponse aux incidents</strong> sont étroitement liées, car elles couvrent l’<strong>identification</strong>, la <strong>collecte</strong> et l’<strong>investigation</strong> des d’artefacts à la suite d’un incident de sécurité. Cependant, une certaine norme doit être respectée pour faire face et pour répondre à un incident informatique. Selon le <a href="https://fr.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology"><strong>NIST (National Institute of Standards and Technology)</strong></a>, une réponse aux incidents de sécurité peut se décompose en <strong>4 grandes phases principales</strong> (<a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf">Guide NIST</a>) :</p>
+<p>1-  <strong>Préparation</strong> : comme son nom l'indique, c'est la phase de <strong>préparation</strong> et d'<strong>anticipation</strong> aux incidents de sécurité. Cette étape permet de <strong>prévenir</strong> et de <strong>répondre</strong> aux <strong>incidents de sécurité</strong>. Pour ce faire, il faut en amont former et sensibiliser les équipes et mettre en place des <strong><a href="https://www.varonis.com/fr/blog/ids-et-ips-en-quoi-sont-ils-differents">systèmes de détection et protection</a></strong> adéquats. Rien de mieux que l’<strong>anticipation</strong>, car on sera tôt ou tard attaqué. </p>
 <p>2-  <strong>Détection et analyse</strong> : à travers les règles de détection mises en place dans des organisation, des alertes de sécurité sont déclenchées en cas suspicion d’incident. A la suite de ce déclenchement, une analyse est ensuite menée pour détecter les faux positifs afin de les classifier. </p>
 <p>3-  <strong>Confinement, éradication et rétablissement</strong> : cette phase vise à limiter au maximum les potentiels impacts que peut causer un incident de sécurité, en essayant d’atténuer les interruptions de service. L’objectif principal de cette phase est de confiner l’incident, pour ensuite investiguer afin de l’anéantir.</p>
 <p>4-  <strong>Activité post-incident</strong> : à la suite de l'incident, un <strong>retour d'expérience</strong> peut être nécessaire pour identifier l'ensemble des difficultés rencontrées au cours de l'activité. Cela peut aider à prevenir de futurs incidents et cela pourra également permettre à l'équipe de réponse aux incidents de mieux se préparer et de limiter les risques que l'incident ne se reproduise.</p>
@@ -2055,13 +2055,6 @@ Il se doit <strong>identifier</strong> le <strong>mode opératoire</strong> des 
 <p><strong>Données non volatiles</strong> : contrairement aux données volatiles, l'état actuel des données non volatiles ne peut changé que par une action utilisateur. Par exemple, un disque dur a des données non volatiles, car le simple redémarrage de l'ordinateur n'impact en aucun cas celles-ci. </p>
 </li>
 </ul>
-<h2 id="types-de-fichiers">Types de fichiers</h2>
-<p>*
-ddddd
-d
-d
-d
-d</p>
 <h2 id="formats-des-fichiers">Formats des fichiers</h2>
 <ul>
 <li><strong>Format RAW</strong></li>
@@ -2072,6 +2065,7 @@ d</p>
 <ul>
 <li><strong>AFF (Advanced Forensic Format)</strong></li>
 </ul>
+<p><strong>IN PROGRESS</strong></p>
 
 
 
