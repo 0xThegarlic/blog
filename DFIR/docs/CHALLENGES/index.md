@@ -1,8 +1,8 @@
 # Challenges
 
-Cette recense l'ensemble des challenges que j'ai eu à résoudre sur mes temps libre. 
+Cette liste recense l'ensemble des challenges que j'ai eu à résoudre pendant mes temps libres.
 
-**NB :** par manque de temps, je n'ai pas pu mettre tous les challenges ici. Cependant, vous avez une liste de quelques un suivi du lien de chaque plateforme. 
+**NB** : Par manque de temps, je n'ai pas pu inclure tous les challenges ici. Cependant, vous trouverez une liste de quelques-uns suivie du lien de chaque plateforme.
 
 
 - Pour les challenges **Cyberdefenders**, jetez un coup d'oeil par là : [Cyberdefenders](Cyberdefenders.md)
@@ -14,5 +14,6 @@ Cette recense l'ensemble des challenges que j'ai eu à résoudre sur mes temps l
 
 
 Bonne lecture !
+
 
 

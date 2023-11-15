@@ -34,6 +34,10 @@ Pour installer **autopsy** sur **Windows** il faut se rendre sur sa [**page offi
 ## Installation d'autopsy sous Windows 
 
 
+**Coming soon.........**
 
 
 ## Installation d'autopsy sous Linux
+
+
+**Coming soon.........**
