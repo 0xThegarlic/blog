@@ -144,30 +144,3 @@ On peut accéder aux registres Windows via la combinaison de la touche **Win+R**
 
 
 
-
-
-
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files
-
-
-<figure>
-<img src="nist.png" 
-        alt="Picture" 
-        width="600" 
-        style="display: block; margin: 0 auto" />
-        <figcaption><p> <center>Système de fichiers FAT <a href="https://www.easeus.fr/partition-manager-tips/systeme-de-fichier-fat.html">(Image Source)</a></center></p></figcaption>
-
-</figure>
