@@ -29,3 +29,19 @@ Et plusieurs articles que j'ai eu à feuilleter au cours de mon apprentissage.
 
 
 Pour démarrer votre aventure, rendez-vous ici : [Digital Forensic et Réponse aux Incidents](DFIR/index.md).
+
+
+## Contact
+
+Pour toutes questions, suggestions ou même critiques, vous pouvez me joindre sur mon [**serveur discord**](https://discord.gg/QrRa2A4CVs) ou sur mon discord perso (**garlic4443**)pour en discuter.
+
+**NB** : je ne suis qu’un passionné et je ne cesse de me former… Je ne suis donc pas parfait 😉.
+
+
+## Contributions
+
+Pris entre mes études, mon alternance, et mes activités personnelles, j’ai très peu de temps pour prendre soin de ce blog. Mais **devinez** quoi ? Vous avez le pouvoir de changer cela 💪!!
+
+Si vous avez une passion pour la cybersécurité et que vous souhaitez partager vos idées, vos analyses ou vos expériences avec la communauté francophone, vous êtes au bon endroit. La porte de contribution à ce blog est grandement ouverte, et j'adorerais que vous en fassiez partie. Cependant, je tiens à ce que chaque contribution soit traitée avec le soin qu'elle mérite. Nous allons examiner attentivement chaque article soumis pour créer une plateforme où chaque voix peut résonner.
+
+Alors, vous êtes prêts à faire partie de cette aventure ? N’hésitez pas à me contacter dès que vous le sentez, et ensemble, ferons de ce blog un espace vibrant d'échanges et de découvertes dans le monde passionnant de la cybersécurité !
