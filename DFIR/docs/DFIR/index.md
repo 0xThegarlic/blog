@@ -2,10 +2,10 @@
 
 Si vous êtes nouveau dans le domaine du ***[DFIR (Digital Forensic and Incident Response)](https://www.crowdstrike.com/cybersecurity-101/digital-forensics-and-incident-response-dfir/)*** et que vous ne savez pas par où commencer, alors ce blog est fait pour vous !
 
-Vous ou certainement l'un de vos proches avez déjà été victime de piratage informatique et vous vous demandiez comment cela s'est produit ? Ou peut-être avez-vous lu dans les journaux qu'une entreprise ou un hôpital a été victime d'une cyberattaque, et vous aimeriez savoir comment ces entreprises et hôpitaux font face à cette crise cyber, comment ils en sortent, et surtout comment ils parviennent à suivre les traces des attaquants pour attribuer l'attaque à un groupe d'attaquants communément appelé APT (Advanced Persistent Threat) ? Eh bien, vous trouverez les réponses à ces questions ici.
+Vous ou certainement l'un de vos proches avez déjà été victime de piratage informatique et vous vous demandiez comment cela s'est produit ? Ou propablement vous avez lu dans les journaux qu'une entreprise ou un hôpital a été victime d'une cyberattaque, et vous aimeriez savoir comment ces entreprises et hôpitaux font face à cette crise cyber, comment ils en sortent, et surtout comment parviennent-ils à suivre les traces des attaquants pour attribuer l'attaque dont ils font face à un groupe d'attaquants communément appelé **[APT (Advanced Persistent Threat)](https://fr.wikipedia.org/wiki/Advanced_Persistent_Threat)** ? Eh bien, vous trouverez les réponses à ces questions ici.
 
 
-Avant de commencer, permettez-moi de vous rassurer qu'en **2020**, je me posais exactement les mêmes questions. Je me demandais :
+Avant de commencer, permettez-moi de vous rassurer qu'en **2021**, je me posais exactement les mêmes questions. Je me demandais :
 
 - À quel moment peut-on affirmer que nous faisons face à une attaque informatique ?
 - Comment les enquêteurs obtiennent-ils des preuves d'une attaque informatique ?
